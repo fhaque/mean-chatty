@@ -1,0 +1,44 @@
+<html>
+    <header>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-sm.css">
+        <link rel="stylesheet" href="css/style-md.css">
+        <link rel="stylesheet" href="css/style-lg.css">
+    </header>
+<body>
+<main>
+<section id="chat-area">
+    <div id="chat-view">
+        <ol id="history">
+            <li>He says: What?</li>
+            <li>She says: Hello?</li>
+        </ol>
+        <div id="uploads-gallery">
+            <h2 id="uploads-gallery_header" class="tab-title">
+                &#8691; Uploaded Files &#8691;
+            </h2>
+            <div id="uploads-gallery_area"></div>
+        </div>
+    </div>
+    <form id="chatForm">
+        <div id="dragDrop">
+            <input id="user" placeholder="User Name">
+            <textarea id="message" placeholder="Type and/or Drag and Drop a file.">
+            </textarea>
+        </div>
+        <button id="submit">Send</button>
+    </form>
+    <div id="dragDrop-list"></div>
+</section>
+    
+
+
+</main>
+</body> 
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/siofu/client.js"></script>
+<script src="/js/app2.js"></script>
+</html>

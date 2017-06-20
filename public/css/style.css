@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Arvo');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+}
+
+.tab-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.5em;
+}
+
+/*
+
+Chat Area and View
+
+*/
+
+#chat-area {
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    min-height: 540px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 5px;
+    border: 3px solid rgb(229, 229, 229);
+    border-radius: 1em;
+    
+    background-color: rgb(249, 249, 249);
+    
+}
+
+#chat-view {
+    position: relative;
+    
+    padding: 0;
+    margin: 0;
+    border-radius: 1em;
+    border: 2px solid rgb(229, 229, 229);
+    
+    overflow: hidden;
+}
+
+/*
+
+Chat History
+
+*/
+
+
+#history {
+    position: relative;
+    
+    height: 80%;
+    padding: 0;
+    padding-bottom: 10%;
+    margin: 0;
+    margin-bottom: 0.2em;
+/*    border: 2px solid rgb(229, 229, 229);*/
+    border-radius: 1em;
+    
+    list-style: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+    background-color: white;
+    
+}
+
+#history > li {
+    display: block;
+    position: relative;
+    left: 0px;
+    
+    height: auto;
+    padding: 0.3em;
+    margin: 0.5em 1em;
+    border-radius: 5px;
+    border: 1px solid rgb(229, 229, 229);
+    
+    background: rgb(229, 229, 229);
+    
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.8em;
+
+}
+
+.bubble_user {
+    background-color: rgb(199, 199, 199);
+    border-radius: 3px;
+    padding: 0.1em 0.5em;
+}
+
+.bubble_client-name {
+    background-color: rgb(129, 129, 129);
+}
+
+.bubble_link {
+    color: black;
+}
+
+/*
+
+File Gallery
+
+*/
+
+#uploads-gallery {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    
+    width: 100%;
+    height: auto;
+    padding: 0.5em 0em;
+    padding-top: 0.1em;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid rgb(229, 229, 229);
+    
+    background-color: white;
+/*    box-sizing: content-box;*/
+    
+}
+
+#uploads-gallery .tab-title {
+    margin: 0;
+}
+
+#uploads-gallery_header {
+    margin: 0;
+
+    text-align: center;
+}
+
+#uploads-gallery_header.open {
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+#uploads-gallery_area {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 90%;
+    padding: 0em 0.5em;
+
+    overflow-y: scroll;
+}
+
+#uploads-gallery_area a {
+    display: inline-block;
+    
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgb(229, 229, 229);
+    border-radius: 5px;
+
+    text-decoration: none;
+    color: black;
+}
+
+#uploads-gallery_area > a > figure > figcaption {
+    font-family: 'Arvo', serif;
+    font-size: 0.8em;
+
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.uploads-gallery_area_img {
+    width: 100%;
+    height: 100px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.uploads-gallery_area_blank {
+    width: 100%;
+    height: 100px;
+
+    background-color: rgb(229, 229, 229);
+}
+
+/*
+
+Chat Form
+
+*/
+
+#chatForm {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    
+    width: 100%;
+    height: 15%;
+    padding: 0;
+    margin-top: 0.5em;
+
+}
+
+#dragDrop {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    order: 1;
+
+    width: 70%;
+    height: 100%;
+    max-height: 7em;
+    
+    margin-right: 1em;
+
+}
+
+#dragDrop.dragover {
+    border: 0.1em solid red;
+    border-radius: 5px;
+}
+
+#user {
+    flex-grow: 0;
+    margin-bottom: 0.5em;
+    
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 5px;
+    
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.8em;
+}
+
+#message {
+    flex-grow: 1;
+    
+    border-radius: 5px;
+    border: 2px solid rgb(229, 229, 229);
+    
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.8em;
+}
+
+#submit {
+    flex-grow: 1;
+    right: 0px;
+    
+    width: 30%;
+    height: 100%;
+    max-height: 7em;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    
+    background: rgb(209, 209, 209);
+    
+    font-family: 'Heebo', sans-serif;
+    font-size: 1em;
+}
+
+#dragDrop-list {
+    width: 100%;
+}
+
+#dragDrop-list span {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 0.1em 0.5em;
+    margin: 0.1em 0.1em;
+
+    background-color: rgb(199, 199, 199);
+
+    word-wrap: break-word;
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.8em;
+}

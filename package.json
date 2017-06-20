@@ -1,0 +1,13 @@
+{
+  "name": "mean-chatty",
+  "main": "server.js",
+  "dependencies": {
+    "async": "~2.4.1",
+    "body-parser": "~1.17.2",
+    "express": "~4.15.3",
+    "mongoose": "~4.10.1",
+    "socket.io": "~2.0.1",
+    "socketio-file-upload": "^0.6.0",
+    "underscore": "~1.8.3"
+  }
+}
